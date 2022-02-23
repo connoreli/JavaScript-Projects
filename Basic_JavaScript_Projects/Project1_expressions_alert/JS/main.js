@@ -7,7 +7,6 @@ var haley = "Haley said, \"Don\'t tell Dad please!\" " + "Connor replied \"Eat m
 document.write(haley) //printing the variable haley
 
 var family = "Eliason", dad = "Todd", mom = "Alison", oldestBrother = "Cody", olderBrother = "Dallin", olderSister = "Haley", me = "Connor" //listing multiple variables in one line
-olderBrother.fontcolor('green') //making Dallin's name green
-document.write(olderBrother) //printing the olderBrother string, dallin
 
+document.write(<font color='green'> + olderBrother + </font>) //printing the olderBrother string, dallin
 document.write(3 + 3) // statement containing expression
