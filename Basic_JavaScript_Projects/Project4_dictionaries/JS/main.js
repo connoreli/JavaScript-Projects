@@ -1,9 +1,10 @@
-function car_Dictionary() {
-    var Car = {
-        Make: "Toyota",
-        Model: "Camry SE",
-        Year: "2014",
-        Mileage: 140000
+function car_Dictionary() { //define function
+    var Car = {             //define variable
+        Make: "Toyota",     //1st KVP
+        Model: "Camry SE",  //2nd KVP
+        Year: "2014",       //3rd KVP
+        Mileage: 140000     //4th KVP
     }
-    document.getElementById("my_Dictionary").innerHTML = Car.Model;
+    delete Car.Model       //delete 2nd KVP
+    document.getElementById("my_Dictionary").innerHTML = Car.Model; //print deleted KVP = undefined
 }
