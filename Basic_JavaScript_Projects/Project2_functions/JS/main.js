@@ -6,5 +6,5 @@ function my_first_function() { // defining function
 function my_function() { // defining function
     var sentence = "Grandma ate my brownie" // defining sentence variable
     sentence += " and the entire cake!" // concatenating the string with an
-    document.getElementById(concatenate).innerHTML = sentence;
+    document.getElementById("concatenate").innerHTML = sentence;
 }
