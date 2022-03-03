@@ -47,7 +47,7 @@ let car = {           //object model using let function
     year: "2014 ",
     color: "grey ",
     description: function () {
-        return "The car is a " + this.year + this.color + this.make + this.model; 
+        return "The car is a " + this.year + this.color + this.make + this.model; //return variables
     }
 };
 document.getElementById("object").innerHTML   //display
