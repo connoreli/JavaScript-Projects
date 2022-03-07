@@ -89,7 +89,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) { //draws win lines usi
         c.clearRect(0, 0, 608, 608)      //clears content from last iteration
         c.beginPath();                  //starts new path
         c.moveTo(x1, y1)               //moves to starting point for line
-        c.lineto(x, y)                //indicates endpoint of line
+        c.lineTo(x, y)                //indicates endpoint of line
         c.lineWidth = 10;            //sets width of line
         c.strokeStyle = "rgba(70, 255, 33, .8)";  //sets color of line
         c.stroke();                 //draws everything we just coded ^^^
