@@ -40,6 +40,7 @@ function checkWinConditions() {  //parses the selectedSquares array looking for 
     if (arrayIncludes("0X", "1X", "2X")) { drawWinLine(50, 100, 558, 100) }   //drawWinLine shows who won and where they got ttt
     else if (arrayIncludes("3X", "4X", "5X")) { drawWinLine(50, 304, 558, 304) }
     else if (arrayIncludes("6X", "7X", "8X")) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes("0X", "3X", "6X")) { drawWinLine(100, 50, 100, 558) }
     else if (arrayIncludes("1X", "4X", "7X")) { drawWinLine(304, 50, 304, 558) }
     else if (arrayIncludes("2X", "5X", "8X")) { drawWinLine(508, 50, 508, 558) }
     else if (arrayIncludes("6X", "4X", "2X")) { drawWinLine(100, 508, 510, 90) }
@@ -66,7 +67,7 @@ function checkWinConditions() {  //parses the selectedSquares array looking for 
 
 function disableClick() {     //makes body element unclickable temporarily
     body.style.pointerEvents = "none";  //makes body unclickable
-    setTimeout(function () { body.style.pointerEvents = "auto"; }, 1000) //makes body clickable again after 1 second
+    setTimeout(function() { body.style.pointerEvents = "auto"; }, 1000) //makes body clickable again after 1 second
 }
 
 function audio(audioURL) {  //function takes string parameter for placement sound
@@ -95,7 +96,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) { //draws win lines usi
         if (x1 <= x2 && y1 <= y2) {  //checks if we reached endpoint
             if (x < x2) { x += 10; }  //adds 10 to previous x point
             if (y < y2) { y += 10; } //adds 10 to previous y point
-            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    //cancels animation loop if endpoint is reached
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }    //cancels animation loop if endpoint is reached
         }
         if (x1 <= x2 && y1 >= y2) {    //necessary for 6, 4, 2 win condition
             if (x < x2) { x += 10; }
@@ -111,7 +112,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) { //draws win lines usi
     disableClick();       //disables click while win audio is playing
     audio("./media/winGame.mp3");       //plays win sound
     animateLineDrawing();              //calls animation loop
-    setTimeout(function () { clear(); resetGame(); }, 1000);   //wait 1 sec, clears canvas, resets game, allows clicking again
+    setTimeout(function() { clear(); resetGame(); }, 1000);   //wait 1 sec, clears canvas, resets game, allows clicking again
 }
 
 function resetGame() {   //function resets game in event of a tie or win
