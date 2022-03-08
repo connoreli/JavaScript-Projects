@@ -2,14 +2,14 @@ function getReceipt() {   //initializes string so it can get passed from functio
     var text1 = "<h3>You ordered:</h3>";
     var runningTotal = 0;
     var sizeTotal = 0;
-    var sizeArray = document.getElementsByClassName("size");
-    for (var i = 0; i < sizeArray.length; i++) {
+    var sizeArray = document.getElementsByClassName("size");   //select all sizes from html
+    for (var i = 0; i < sizeArray.length; i++) {     
         if (sizeArray[i].checked) {
             var selectedSize = sizeArray[i].value;
             text1 = text1 + selectedSize + "<br>";
         }
     }
-    if (selectedSize === "Personal Pizza") {
+    if (selectedSize === "Personal Pizza") {  //assigning price to each size of pizza
         sizeTotal = 6;
     } else if (selectedSize === "Small Pizza") {
         sizeTotal = 8;
@@ -20,7 +20,7 @@ function getReceipt() {   //initializes string so it can get passed from functio
     } else if (selectedSize === "Extra Large Pizza") {
         sizeTotal = 16;
     }
-    runningTotal = sizeTotal;
+    runningTotal = sizeTotal;        //add size price to running price
     console.log(selectedSize + " = $" + sizeTotal + ".00");
     console.log("size text1: " + text1);
     console.log("subtotal: $" + runningTotal + ".00");
@@ -30,7 +30,7 @@ function getReceipt() {   //initializes string so it can get passed from functio
 function getTopping(runningTotal, text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
-    var toppingArray = document.getElementsByClassName("toppings");
+    var toppingArray = document.getElementsByClassName("toppings");   //putting all toppings into our array
     for (var j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
             selectedTopping.push(toppingArray[j].value);
@@ -39,12 +39,12 @@ function getTopping(runningTotal, text1) {
         }
     }
     var toppingCount = selectedTopping.length;
-    if (toppingCount > 1) {
-        toppingTotal = (toppingCount - 1);
+    if (toppingCount > 1) {      
+        toppingTotal = (toppingCount - 1);     //if you only one/two topping is selected, no charge
     } else {
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingTotal);
+    runningTotal = (runningTotal + toppingTotal);      //add topping total to running total
     console.log("total selected topping items: " + toppingCount);
     console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
     console.log("topping text1: " + text1)

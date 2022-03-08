@@ -5,14 +5,14 @@
 }
 
 #frmMenu {
-    width: 400px;
+    width: 600px;
     height: 200px;
 }
 
 #totalPrice {
-    width: 400px;
+    width: 200px;
     height: 190px;
-    margin: 0 auto;
+    margin: 20px auto;
     float: right;
 }
 
@@ -28,6 +28,12 @@
     float: right;
 }
 
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
 #showText {
     width: 200px;
     height: 190px;
@@ -36,8 +42,7 @@
 }
 
 #cart {
-    top: 0;
-    margin: 0px auto;
+    top: 0;margin: 0px auto;
     width: 400px;
     height: 200px;
 }
@@ -46,6 +51,8 @@
     margin: 10px 0px 0px 100px;
     width: 100px;
     height: 40px;
+    display: block;
+    margin: 25px auto;
 }
 
 body {
@@ -55,6 +62,7 @@ body {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: darkred;
+    text-align: center;
 }
 
 h3 {
