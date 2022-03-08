@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.min.js"> type="text/javascript"</script>
+    </head>
+    <script>
+        $(document).ready (function(){
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"});        //change p2 to red
+            $("#3").click(function() {          //when 3 clicked on,
+                $('h1').hide();                //hide h1
+            });
+        });
+
+    </script>
+</html>
