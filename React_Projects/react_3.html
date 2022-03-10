@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    </head>
+    <body>
+        <div id="JSX"></div>
+        <script type="text/babel">
+            class Greeting extends React.Component {
+                render() {
+                    return <h1>JSX and React all working together!</h1>
+                }
+            }
+
+            ReactDOM.render(<Greeting />, document.getElementById("JSX"))
+        </script>
+    </body>
+</html>

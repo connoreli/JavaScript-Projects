@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Get it done!</title>
+        <link rel="stylesheet" href="./css/todo.css">
+    </head>
+    <body>
+        <input id="task"><button id="add">Add Item</button>
+        <hr>
+        <div id="todos"></div>
+        <p id="trash"></p>
+        <p id="myCar"></p>
+        <p id="myName"></p>
+
+        <script src="./js/todo.js">
+
+            var to_do = {task: "Take out trash", day: "Thursday", urgency_level: "Low"};
+            var JSONstring = JSON.stringify(to_do);
+            document.getElementById("trash").innerHTML = JSONstring;
+
+            var car = '{"make": "Toyota", "model": "Camry", "color:" "Grey"}';
+            var JSONstring = JSON.parse(car);
+            document.getElementById("myCar").innerHTML = JSONstring.name + " the " +
+                JSONstring.breed;
+
+            localStorage.setItem("Name", "Connor");
+            document.getElementById("myName").innerHTML = localStorage.getItem("Name");
+        </script>
+
+        <footer>
+            Connor Eliason | 2022&copy; | Software Engineer
+        </footer>
+    </body>
+</html>

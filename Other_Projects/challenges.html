@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./JavaScript/challenges.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="stylesheet" href="./CSS/challenges.css">
+    </head>
+    <body>
+        
+        <div id="slideshow">
+            <script>
+                $("#slideshow > div:gt(0)").hide();
+
+                    setInterval(function () {
+                        $("#slideshow > div:first")
+                        .fadeOut(1000)
+                        .next()
+                        .fadeIn(1000)
+                        .end()
+                        .appendTo("#slideshow");
+                    }, 3000);
+            </script>
+            <div>
+                <img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+            </div>
+            <div>
+                <img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+            </div>
+            <div>
+                Pretty cool eh? This slide is proof the content can be anything.
+            </div>
+        </div>
+
+        <div>
+            <p>Hey this is a horizontal rule</p>
+            <hr>
+            Pretty cool right
+        </div>
+        
+    </body>
+</html>
